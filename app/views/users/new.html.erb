@@ -2,18 +2,18 @@
 <p>
   Esta página será utilizada para realizar o cadastro de novos usuários.
   <%= form_for(@user) do |f| %>
-  <%= f.label :nome %>
-  <%= f.text_field :name %>
+    <%= f.label :nome %>
+    <%= f.text_field :name %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
 
-  <%= f.label :senha %>
-  <%= f.password_field :password %>
+    <%= f.label :senha %>
+    <%= f.password_field :password %>
 
-  <%= f.label :password_confirmation, "Confirmação de senha" %>
-  <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirmação de senha" %>
+    <%= f.password_field :password_confirmation %>
 
-  <%= f.submit "Cadastrar", class: "btn btn-primary" %>
-<% end %>
+    <%= f.submit "Cadastrar", class: "btn btn-primary" %>
+  <% end %>
 </p>
