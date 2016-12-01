@@ -1,0 +1,12 @@
+<h1>Entrar</h1>
+<p>
+  <%= form_for(:session, url: entrar_path) do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :senha %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Entrar", class: "btn btn-primary" %>
+  <% end %>
+</p>
