@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def show
-    @user = User.find(params[:id])
+    @user  = User.find(params[:id])
+    @group = current_user.groups.build
   end
 
   def new
@@ -33,13 +34,6 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
-    end
-
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "Entre antes de realizar essa ação."
-        redirect_to entrar_url
-      end
     end
 
     def admin_user

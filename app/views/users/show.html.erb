@@ -2,6 +2,8 @@ Oi, <%= @user.name %>, seu e-mail é <%= @user.email %>.
 
 <%= link_to "Sair", sair_path, method: "delete" %>
 
+<%= render 'shared/group_form' %>
+
 <% if current_user.admin? %>
   | <%= link_to "Usuários", indice_path %>
 <% end %>

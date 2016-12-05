@@ -1,0 +1,14 @@
+<h1><%= @group.name %></h1>
+<p>
+  Organizador: <%= @group.user.name %>
+</p>
+
+<p>
+  <% if @group.limit.present? %>
+    Limite de preço: R$<%= @group.limit %>
+  <% else %>
+    Limite de preço não definido.
+  <% end %>
+</p>
+
+<%= render 'shared/participants_form' %>

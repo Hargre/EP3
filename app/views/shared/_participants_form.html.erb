@@ -1,0 +1,6 @@
+<%= form_for(@participant) do |f| %>
+  <%= f.text_field :name,  placeholder: 'Nome do participante'%>
+  <%= f.text_field :email, placeholder: 'E-mail do participante'%>
+
+  <%= f.submit "Adicionar", class: "btn btn-primary" %>
+<% end %>
