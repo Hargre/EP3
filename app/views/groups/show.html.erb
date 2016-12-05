@@ -3,12 +3,16 @@
   Organizador: <%= @group.user.name %>
 </p>
 
-<p>
-  <% if @group.limit.present? %>
-    Limite de preço: R$<%= @group.limit %>
-  <% else %>
-    Limite de preço não definido.
-  <% end %>
-</p>
-
 <%= render 'shared/participants_form' %>
+
+<% if @participants.present? %>
+  | <h3>
+      Participantes
+      <%= @participants.count %>
+    </h3>
+
+    <ul>
+      <%= render @participants %>
+      <%= will_paginate(@participants) %>
+    </ul>
+<% end %>

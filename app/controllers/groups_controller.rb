@@ -14,6 +14,8 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @participant = @group.participants.build
+    @participants = @group.participants.order('created_at ASC')
+                          .paginate(per_page: 15, page: (params[:page]))
   end
 
   private
