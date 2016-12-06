@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   post   'entrar'   => 'sessions#create'
   delete 'sair'     => 'sessions#destroy'
 
+  post '/groups/:group/match' => 'groups#match', as: :group_match
+
   resources :users
   resources :groups
-  resources :participants
+  resources :participants, only: [:create, :destroy]
 end

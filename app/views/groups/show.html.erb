@@ -6,8 +6,8 @@
 <%= render 'shared/participants_form' %>
 
 <% if @participants.present? %>
-  | <h3>
-      Participantes
+    <h3>
+      Participantes:
       <%= @participants.count %>
     </h3>
 
@@ -15,4 +15,10 @@
       <%= render @participants %>
       <%= will_paginate(@participants) %>
     </ul>
+
+    <% if @participants.count > 2 && !@group.matched %>
+      <%= link_to 'Sortear', group_match_path(@group), class:  "btn btn-primary",
+                                                       method: 'post' %>
+    <% end %>
+    
 <% end %>
