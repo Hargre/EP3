@@ -37,7 +37,7 @@ class GroupsController < ApplicationController
       @group.matched = true
       @group.save
       send_emails(@group)
-      flash[:success] = 'Sorteio realizado com sucesso!'
+      flash.now[:success] = 'Sorteio realizado com sucesso!'
     end
   end
 
