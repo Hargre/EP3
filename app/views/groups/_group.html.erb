@@ -1,0 +1,8 @@
+<li id="group-<%= group.id %>">
+  <%= link_to group.name, group %>
+  <div class="boom_button">
+    <%= link_to 'x', group, method: :delete, data: { confirm: 'Remover esse grupo?' }, 
+                            title: "Delete: #{group.name}", 
+                            class: [:btn, 'btn-xs', 'btn-danger'] %>
+  </div>
+</li>

@@ -11,6 +11,13 @@ class GroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @user = @group.user
+    @group.destroy
+    redirect_to @user
+  end
+
   def show
     @group = Group.find(params[:id])
     @participant = @group.participants.build

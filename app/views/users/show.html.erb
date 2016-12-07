@@ -1,9 +1,17 @@
-Oi, <%= @user.name %>, seu e-mail é <%= @user.email %>.
-
 <%= link_to "Sair", sair_path, method: "delete" %>
 
 <%= render 'shared/group_form' %>
 
+<div class="col-md-8">
+    <% if @user.groups.any? %>
+      <h3>Grupos (<%= @user.groups.count %>)</h3>
+      <ol class="groups">
+        <%= render @groups %>
+      </ol>
+      <%= will_paginate @groups %>
+    <% end %>
+  </div>
+
 <% if current_user.admin? %>
-  | <%= link_to "Usuários", indice_path %>
+    <%= link_to "Usuários", indice_path %>
 <% end %>
