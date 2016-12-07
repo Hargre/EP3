@@ -16,8 +16,11 @@
   <% if @participants.present? %>
     <div class="col-md-8">
       <h3>
-        Participantes
-        <%= (@participants.count) %>
+        <% if @participants.count>1 %>
+          <%= @participants.count %> Participantes:
+        <% else %>
+          <%= @participants.count %> Participante:
+        <% end %>
       </h3>
       <ul class="participants">
         <%= render @participants %>
