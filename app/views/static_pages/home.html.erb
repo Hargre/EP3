@@ -1,13 +1,10 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
       <section class="group_form">
         <%= render 'shared/group_form' %>
       </section>
-    </aside>
   </div>
-  <%= link_to "Perfil", current_user %>
-<% else %> 
+<% else %>
   <div class="center jumbotron">
     <h1>Friend occulter</h1>
 
@@ -21,4 +18,3 @@
     </p>
   </div>
 <% end %>
-
