@@ -6,11 +6,10 @@
 
 <div class="col-md-8">
   <% if @user.groups.any? %>
-    <h3>Grupos (<%= @user.groups.count %>)</h3>
-    <ol class="groups">
+    <h1>Grupos (<%= @user.groups.count %>)</h1>
+    <h4 class="groups">
       <%= render @groups %>
-    </ol>
+    </h4>
     <%= will_paginate @groups %>
   <% end %>
 </div>
-
