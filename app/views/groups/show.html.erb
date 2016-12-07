@@ -24,7 +24,7 @@
         <%= will_paginate(@participants) %>
       </ul>
       <% if @participants.count > 2 && !@group.matched %>
-        <%= link_to 'Match', group_match_path(@group), class: "btn btn-primary", method: 'post' %>
+        <%= link_to 'Sortear', group_match_path(@group), class: "btn btn-primary", method: 'post' %>
       <% end %>
     </div>
   <% end %>

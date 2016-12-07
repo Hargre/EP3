@@ -20,7 +20,7 @@ textarea {
 }
 
 .center {
-  text-align: center; 
+  text-align: center;
 }
 
 .center h1 {
@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 54px;
   letter-spacing: -2px;
+  margin-top: 40px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -44,15 +45,17 @@ h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
+  margin-top: 40px;
+  margin-left: 20px;
   font-weight: normal;
   color: #777;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-
+  margin-top: 40px;
   text-align: center;
   font-weight: normal;
   color: #777;
@@ -89,6 +92,7 @@ footer small {
 
 footer ul {
   float: right;
+  margin-right: 5px;
   list-style: none;
 }
 
