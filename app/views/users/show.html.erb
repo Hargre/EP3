@@ -1,17 +1,24 @@
 <%= link_to "Sair", sair_path, method: "delete" %>
-
-<%= render 'shared/group_form' %>
-
-<div class="col-md-8">
-    <% if @user.groups.any? %>
-      <h3>Grupos (<%= @user.groups.count %>)</h3>
-      <ol class="groups">
-        <%= render @groups %>
-      </ol>
-      <%= will_paginate @groups %>
-    <% end %>
-  </div>
-
+<%= link_to "Página inicial", root_url %>
 <% if current_user.admin? %>
     <%= link_to "Usuários", indice_path %>
 <% end %>
+
+<div class="row">
+    <aside class="col-md-4">
+      <section class="group_form">
+        <%= render 'shared/group_form' %>
+      </section>
+    </aside>
+  </div>
+
+<div class="col-md-8">
+  <% if @user.groups.any? %>
+    <h3>Grupos (<%= @user.groups.count %>)</h3>
+    <ol class="groups">
+      <%= render @groups %>
+    </ol>
+    <%= will_paginate @groups %>
+  <% end %>
+</div>
+

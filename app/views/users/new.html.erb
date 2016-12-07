@@ -1,14 +1,14 @@
 <h1>Cadastro</h1>
 <p>
-  Esta página será utilizada para realizar o cadastro de novos usuários.
   <%= form_for(@user) do |f| %>
-    <%= f.label :nome %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.label :name, "Nome" %>
     <%= f.text_field :name %>
 
-    <%= f.label :email %>
+    <%= f.label :email, "Email" %>
     <%= f.email_field :email %>
 
-    <%= f.label :senha %>
+    <%= f.label :password, "Senha" %>
     <%= f.password_field :password %>
 
     <%= f.label :password_confirmation, "Confirmação de senha" %>

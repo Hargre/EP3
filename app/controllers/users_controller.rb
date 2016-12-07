@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user  = User.find(params[:id])
-    @group = current_user.groups.build
+    @group = @user.groups.build
     @groups = @user.groups.paginate(page: params[:page])
   end
 

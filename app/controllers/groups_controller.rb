@@ -3,11 +3,12 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
+    @user  = @group.user
     if @group.save
       flash[:success] = "Grupo criado!"
       redirect_to @group
     else
-      render 'root'
+      render 'static_pages/home'
     end
   end
 
