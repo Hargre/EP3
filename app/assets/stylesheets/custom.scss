@@ -20,7 +20,7 @@ textarea {
 }
 
 .center {
-  text-align: center;
+  text-align: center; 
 }
 
 .center h1 {
@@ -108,4 +108,20 @@ input, textarea, select, .uneditable-input {
 
 input {
   height: auto !important;
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
 }
