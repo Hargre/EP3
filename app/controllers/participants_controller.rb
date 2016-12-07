@@ -1,7 +1,7 @@
 class ParticipantsController < ApplicationController
   def create
     @participant = Participant.new(participant_params)
-    flash[:success] = 'Participante criado!' if @participant.save!
+    flash[:success] = 'Participante criado!' if @participant.save
     redirect_to group_path(@participant.group)
   end
 
