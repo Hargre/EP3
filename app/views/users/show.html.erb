@@ -4,14 +4,6 @@
     <%= link_to "Usuários", indice_path %>
 <% end %>
 
-<div class="row">
-    <aside class="col-md-4">
-      <section class="group_form">
-        <%= render 'shared/group_form' %>
-      </section>
-    </aside>
-  </div>
-
 <div class="col-md-8">
   <% if @user.groups.any? %>
     <h3>Grupos (<%= @user.groups.count %>)</h3>
