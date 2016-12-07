@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 68px;
+  font-size: 54px;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -52,6 +52,16 @@ p {
   color: #777;
 }
 
+div{
+  width: 1000px;
+  height: 320px;
+  margin-left: -500px; /* metade da largura */
+  margin-top: -300px; /* metade da altura */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 /* footer */
 
 footer {
@@ -59,6 +69,9 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  position:absolute;
+	bottom:0;
+	width:100%;
 }
 
 footer a {
